@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package factorial;
+
+// The factorial service definition
+service FactorialService {
+  // Calculate factorial of a number
+  rpc CalculateFactorial (FactorialRequest) returns (FactorialResponse) {}
+}
+
+// The request message containing the number
+message FactorialRequest {
+  int32 number = 1;
+}
+
+// The response message containing the result
+message FactorialResponse {
+  int64 result = 1;
+}
